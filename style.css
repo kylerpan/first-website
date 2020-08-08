@@ -1,0 +1,242 @@
+
+
+/* foreground */
+body {
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Yanone Kaffeesatz';
+    background-color: #EECEB3;
+}
+
+.body-wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+}
+
+.profile {
+    z-index: 99;
+    position: absolute;
+    left: 10vw;
+    top: calc(50vh - 12.5vw);
+    height: 25vw;
+    width: 25vw;
+    border-radius: 100%;
+    border: 0.5vh solid white;
+}
+
+.header {
+    z-index: 99;
+    position: absolute;
+    left: 45vw;
+    top: 37vh;
+    font-size: calc(100vw / 30);
+    font-weight: bold;
+}
+
+.text_one {
+    z-index: 99;
+    position: absolute;
+    left: 45vw;
+    top: 47vh;
+    font-size: calc(100vw / 70);
+}
+
+.text_two {
+    z-index: 99;
+    position: absolute;
+    left: 45vw;
+    top: 51vh;
+    font-size: calc(100vw / 70);
+}
+
+.github {
+    z-index: 99;
+    position: absolute;
+    width: 3.7vw;
+    height: auto;
+    left: 45vw;
+    top: 56vh;
+}
+
+.resume {
+    z-index: 99;
+    position: absolute;
+    width: 4vw;
+    height: auto;
+    left: 50vw;
+    top: 56vh;
+}
+
+/* background */
+
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.flowers {
+    z-index: 1;
+    position: absolute;
+    width: 90vw;
+    height: auto;
+    left: 5vw;
+    top: 85vh;
+}
+
+.clouds_one {
+    z-index: 1;
+    position: absolute;
+    width: 11vw;
+    height: auto;
+    left: 100vw;
+    top: 0vh;
+    animation: move_cloud 27s linear infinite;
+    animation-delay: 2s;
+}
+
+.clouds_two {
+    z-index: 2;
+    position: absolute;
+    width: 13vw;
+    height: auto;
+    left: 100vw;
+    top: 3vh;
+    animation: move_cloud 30s linear infinite;
+    animation-delay: 6s;
+}
+
+.clouds_three {
+    z-index: 3;
+    position: absolute;
+    width: 20vw;
+    height: auto;
+    left: 100vw;
+    top: 5vh;
+    animation: move_cloud 25s linear infinite;
+    animation-delay: 0s;
+}
+
+.clouds_four {
+    z-index: 4;
+    position: absolute;
+    width: 17vw;
+    height: auto;
+    left: 100vw;
+    top: 3vh;
+    animation: move_cloud 26s linear infinite;
+    animation-delay: 4s;
+}
+
+
+.clouds_five {
+    z-index: 3;
+    position: absolute;
+    width: 18vw;
+    height: auto;
+    left: 100vw;
+    top: 4vh;
+    animation: move_cloud 34s linear infinite;
+    animation-delay: 9s;
+}
+
+.clouds_six {
+    z-index: 5;
+    position: absolute;
+    width: 15vw;
+    height: auto;
+    left: 100vw;
+    top: 4vh;
+    animation: move_cloud 27s linear infinite;
+    animation-delay: 12s;
+}
+
+.clouds_seven {
+    z-index: 3;
+    position: absolute;
+    width: 17vw;
+    height: auto;
+    left: 100vw;
+    top: 0vh;
+    animation: move_cloud 26s linear infinite;
+    animation-delay: 15s;
+}
+
+.clouds_eight {
+    z-index: 1;
+    position: absolute;
+    width: 19vw;
+    height: auto;
+    left: 100vw;
+    top: 3vh;
+    animation: move_cloud 31s linear infinite;
+    animation-delay: 19s;
+}
+
+
+@keyframes move_cloud {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-120vw);
+    }
+}
+
+/* background
+.background-wrapper {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background box {
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    bottom: -100vh;
+    animation: animate 5s linear infinite;
+}
+
+.background box:nth-child(1){
+    left: 90vw;
+    background: rgba(204, 221, 211, 0.7);
+    animation-delay: 0s;
+}
+
+.background box:nth-child(2){
+    left: 10vw;
+    background: rgba(175, 194, 213, 0.7);
+    animation-delay: 0s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(360deg);
+        opacity: 0.5;
+        border: 20%;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+        border-radius: 40%;
+    }
+} */
+
