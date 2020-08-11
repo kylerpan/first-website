@@ -6,69 +6,81 @@ body {
     background-color: #EECEB3;
 }
 
-.body-wrapper {
+.site-wrapper {
     height: 100vh;
     width: 100vw;
     display: grid;
+    place-items: center;
+}
+
+.body-wrapper {
+    z-index: 99;
+    height: auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 30vw 35vw; 
+    grid-template-rows: 6vw 4vw 7vw 4vw 6vw;
+}
+
+.profile {
+    position: static;
+    height: auto;
+    width: 25vw;
+    border-radius: 100%;
+    border: 0.5vh solid white;
+    margin: 1vw 2.5vw;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.header {
+    position: static;
+    margin-left: 2.5vw;
+    font-size: calc(100vw / 30);
+    font-weight: bold;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    align-self: end;
+    justify-self: start;
+}
+
+.text {
+    position: static;
+    margin-left: 2.5vw;
+    font-size: calc(100vw / 70);
+    grid-column-start: 2;
+    grid-row-start: 3;
+    align-self: center;
+    justify-self: start;
 }
 
 .social-wrapper {
     height: auto;
-    width: 100%;
+    max-width: 35vw;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    display: grid;
+    grid-template-columns: 6.5vw repeat(5, 5vw);
+    grid-template-rows: 4vw;
 }
 
-.profile {
-    z-index: 99;
-    position: absolute;
-    left: 10vw;
-    top: calc(50vh - 12.5vw);
-    height: 25vw;
-    width: 25vw;
-    border-radius: 100%;
-    border: 0.5vh solid white;
-}
-
-.header {
-    z-index: 99;
-    position: absolute;
-    left: 45vw;
-    top: 37vh;
-    font-size: calc(100vw / 30);
-    font-weight: bold;
-}
-
-.text_one {
-    z-index: 99;
-    position: absolute;
-    left: 45vw;
-    top: 47vh;
-    font-size: calc(100vw / 70);
-}
-
-.text_two {
-    z-index: 99;
-    position: absolute;
-    left: 45vw;
-    top: 51vh;
-    font-size: calc(100vw / 70);
+.social_links {
+    justify-self: end;
 }
 
 .github {
-    z-index: 99;
-    position: absolute;
+    position: static;
     width: 3.7vw;
     height: auto;
-    left: 45vw;
-    top: 56vh;
+    grid-column-start: 1;
 }
 
 .resume {
-    z-index: 99;
-    position: absolute;
+    position: static;
     width: 4vw;
     height: auto;
-    left: 50vw;
-    top: 56vh;
+    grid-column-start: 2;
 }
 
 
