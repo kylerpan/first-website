@@ -13,6 +13,22 @@ body {
     place-items: center;
 }
 
+/* background */
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* desktop view */
+
+#content-desktop {
+    display: block;
+}
+#content-mobile {
+    display: none;
+}
+
 .body-wrapper {
     z-index: 99;
     height: auto;
@@ -83,15 +99,7 @@ body {
     grid-column-start: 2;
 }
 
-
-/* background */
-.background {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
- /* clouds */
+/* clouds */
 .clouds_1 {
     z-index: 1;
     position: absolute;
@@ -343,6 +351,209 @@ body {
     top: 85vh;
 }
 
+/* phone view */
+@media only screen and (max-width: 600px) {
+
+    #content-desktop {
+        display: none;
+    }
+    #content-mobile {
+        display: block;
+    }
+
+    .body-wrapper {
+        z-index: 99;
+        height: auto;
+        width: 70vw;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        grid-template-columns: 70vw; 
+        grid-template-rows: 70vw 5vh 5vh 7vw;
+    }
+    
+    .profile {
+        position: static;
+        height: auto;
+        width: 63vw;
+        margin: 2.5vw;
+        border-radius: 100%;
+        border: 0.5vh solid white;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        align-self: start;
+    }
+    
+    .header {
+        position: static;
+        margin-top: 1vh;
+        font-size: calc(100vw / 13);
+        font-weight: bold;
+        grid-column-start: 1;
+        grid-row-start: 2;
+        justify-self: center;
+    }
+    
+    .text {
+        position: static;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        font-size: calc(100vw / 35);
+        grid-column-start: 1;
+        grid-row-start: 3;
+        justify-self: center;
+    }
+    
+    .social-wrapper {
+        display: grid;
+        grid-column-start: 1;
+        grid-row-start: 4;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .social_links {
+        justify-self: center;
+    }
+    
+    .github {
+        position: static;
+        width: 7vw;
+        height: auto;
+    }
+    
+    .resume {
+        position: static;
+        width: 8vw;
+        height: auto;
+    }
+
+    /* clouds */
+    .clouds_1 {
+        z-index: 3;
+        position: absolute;
+        width: auto;
+        height: 29vh;
+        left: 100vw;
+        top: 5vh;
+        animation: move_cloud 25s linear infinite;
+        animation-delay: 0s;
+    }
+    
+    .clouds_2 {
+        z-index: 1;
+        position: absolute;
+        width: auto;
+        height: 20vh;
+        left: 100vw;
+        top: 0vh;
+        animation: move_cloud 27s linear infinite;
+        animation-delay: 5s;
+    }
+
+    .clouds_3 {
+        z-index: 4;
+        position: absolute;
+        width: auto;
+        height: 26vh;
+        left: 100vw;
+        top: 3vh;
+        animation: move_cloud 26s linear infinite;
+        animation-delay: 7s;
+    }
+
+    .clouds_4 {
+        z-index: 3;
+        position: absolute;
+        width: auto;
+        height: 27vh;
+        left: 100vw;
+        top: 0vh;
+        animation: move_cloud 30s linear infinite;
+        animation-delay: 12s;
+    }
+
+    .flowers_1 {
+        z-index: 1;
+        position: absolute;
+        width: 10vw;
+        height: auto;
+        left: 5vw;
+        top: 85vh;
+    }
+    
+    .flowers_2 {
+        z-index: 1;
+        position: absolute;
+        width: 10vw;
+        height: auto;
+        left: 15vw;
+        top: 85vh;
+    }
+    
+    .flowers_3 {
+        z-index: 1;
+        position: absolute;
+        width: 10vw;
+        height: auto;
+        left: 25vw;
+        top: 85vh;
+    }
+    
+    .flowers_4 {
+        z-index: 1;
+        position: absolute;
+        width: 10vw;
+        height: auto;
+        left: 35vw;
+        top: 85vh;
+    }
+    
+    .flowers_5 {
+        z-index: 1;
+        position: absolute;
+        width: 10vw;
+        height: auto;
+        left: 45vw;
+        top: 85vh;
+    }
+    
+    .flowers_6 {
+        z-index: 1;
+        position: absolute;
+        width: 10vw;
+        height: auto;
+        left: 55vw;
+        top: 85vh;
+    }
+    
+    .flowers_7 {
+        z-index: 1;
+        position: absolute;
+        width: 10vw;
+        height: auto;
+        left: 65vw;
+        top: 85vh;
+    }
+    
+    .flowers_8 {
+        z-index: 1;
+        position: absolute;
+        width: 10vw;
+        height: auto;
+        left: 75vw;
+        top: 85vh;
+    }
+    
+    .flowers_9 {
+        z-index: 1;
+        position: absolute;
+        width: 10vw;
+        height: auto;
+        left: 85vw;
+        top: 85vh;
+    }
+}
+
 
 @keyframes move_cloud {
     0% {
@@ -350,6 +561,6 @@ body {
     }
 
     100% {
-        transform: translateX(-120vw);
+        transform: translateX(-150vw);
     }
 }
