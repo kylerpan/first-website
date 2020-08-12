@@ -22,11 +22,12 @@ body {
 
 
 /* desktop view */
-#content-desktop {
-    display: block;
-}
-#content-mobile {
+.content-mobile {
     display: none;
+}
+
+.content-desktop {
+    display: block;
 }
 
 .body-wrapper {
@@ -190,15 +191,15 @@ body {
 .flowers_17 { left: 85vw; }
 .flowers_18 { left: 90vw; }
 
-
 /* mobile  view */
 @media only screen and (max-width: 600px) {
 
-    #content-desktop {
-        display: none;
-    }
-    #content-mobile {
+    .content-mobile {
         display: block;
+    }
+    
+    .content-desktop {
+        display: none;
     }
 
     .body-wrapper {
