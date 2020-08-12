@@ -14,14 +14,14 @@ body {
 }
 
 /* background */
-.background {
+.background-wrapper {
     position: absolute;
-    left: 0;
-    top: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
-/* desktop view */
 
+/* desktop view */
 #content-desktop {
     display: block;
 }
@@ -100,258 +100,98 @@ body {
 }
 
 /* clouds */
-.clouds_1 {
-    z-index: 1;
+#clouds_desktop {
     position: absolute;
-    width: 11vw;
     height: auto;
     left: 100vw;
+}
+
+.clouds_1 {
+    z-index: 1;
+    width: 11vw;
     top: 0vh;
     animation: move_cloud 27s linear infinite;
     animation-delay: 2s;
 }
-
 .clouds_2 {
     z-index: 2;
-    position: absolute;
     width: 13vw;
-    height: auto;
-    left: 100vw;
     top: 3vh;
     animation: move_cloud 30s linear infinite;
     animation-delay: 6s;
 }
-
 .clouds_3 {
     z-index: 3;
-    position: absolute;
     width: 20vw;
-    height: auto;
-    left: 100vw;
     top: 5vh;
     animation: move_cloud 25s linear infinite;
     animation-delay: 0s;
 }
-
 .clouds_4 {
     z-index: 4;
-    position: absolute;
     width: 17vw;
-    height: auto;
-    left: 100vw;
     top: 3vh;
     animation: move_cloud 26s linear infinite;
     animation-delay: 4s;
 }
-
 .clouds_5 {
     z-index: 3;
-    position: absolute;
     width: 18vw;
-    height: auto;
-    left: 100vw;
     top: 4vh;
     animation: move_cloud 34s linear infinite;
     animation-delay: 9s;
 }
-
 .clouds_6 {
     z-index: 5;
-    position: absolute;
     width: 15vw;
-    height: auto;
-    left: 100vw;
     top: 4vh;
     animation: move_cloud 27s linear infinite;
     animation-delay: 12s;
 }
-
 .clouds_7 {
     z-index: 3;
-    position: absolute;
     width: 17vw;
-    height: auto;
-    left: 100vw;
     top: 0vh;
     animation: move_cloud 26s linear infinite;
     animation-delay: 15s;
 }
-
 .clouds_8 {
     z-index: 1;
-    position: absolute;
     width: 19vw;
-    height: auto;
-    left: 100vw;
     top: 3vh;
     animation: move_cloud 31s linear infinite;
     animation-delay: 19s;
 }
 
- /* flowers */
-.flowers_1 {
-    z-index: 1;
+/* flowers */
+#flowers_desktop {
     position: absolute;
     width: 5vw;
-    height: auto;
-    left: 5vw;
+    height: 5vw;
     top: 85vh;
 }
 
-.flowers_2 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 10vw;
-    top: 85vh;
-}
+.flowers_1 { left: 5vw; }
+.flowers_2 { left: 10vw; }
+.flowers_3 { left: 15vw; }
+.flowers_4 { left: 20vw; }
+.flowers_5 { left: 25vw; }
+.flowers_6 { left: 30vw; }
+.flowers_7 { left: 35vw; }
+.flowers_8 { left: 40vw; }
+.flowers_9 { left: 45vw; }
+.flowers_10 { left: 50vw; }
+.flowers_11 { left: 55vw; }
+.flowers_12 { left: 60vw; }
+.flowers_13 { left: 65vw; }
+.flowers_14 { left: 70vw; }
+.flowers_15 { left: 75vw; }
+.flowers_16 { left: 80vw; }
+.flowers_17 { left: 85vw; }
+.flowers_18 { left: 90vw; }
 
-.flowers_3 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 15vw;
-    top: 85vh;
-}
 
-.flowers_4 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 20vw;
-    top: 85vh;
-}
-
-.flowers_5 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 25vw;
-    top: 85vh;
-}
-
-.flowers_6 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 30vw;
-    top: 85vh;
-}
-
-.flowers_7 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 35vw;
-    top: 85vh;
-}
-
-.flowers_8 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 40vw;
-    top: 85vh;
-}
-
-.flowers_9 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 45vw;
-    top: 85vh;
-}
-
-.flowers_10 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 50vw;
-    top: 85vh;
-}
-
-.flowers_11 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 55vw;
-    top: 85vh;
-}
-
-.flowers_12 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 60vw;
-    top: 85vh;
-}
-
-.flowers_13 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 65vw;
-    top: 85vh;
-}
-
-.flowers_14 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 70vw;
-    top: 85vh;
-}
-
-.flowers_15 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 75vw;
-    top: 85vh;
-}
-
-.flowers_16 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 80vw;
-    top: 85vh;
-}
-
-.flowers_17 {
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 85vw;
-    top: 85vh;
-}
-
-.flowers_18{
-    z-index: 1;
-    position: absolute;
-    width: 5vw;
-    height: auto;
-    left: 90vw;
-    top: 85vh;
-}
-
-/* phone view */
+/* mobile  view */
 @media only screen and (max-width: 600px) {
 
     #content-desktop {
@@ -369,7 +209,7 @@ body {
         place-items: center;
         text-align: center;
         grid-template-columns: 70vw; 
-        grid-template-rows: 70vw 5vh 7vh 9.5vw;
+        grid-template-rows: 70vw 5vh 8vh 10vw;
     }
     
     .profile {
@@ -387,7 +227,7 @@ body {
     .header {
         position: static;
         margin-top: 1vh;
-        font-size: calc(100vw / 11);
+        font-size: calc(100vw / 10);
         font-weight: bold;
         grid-column-start: 1;
         grid-row-start: 2;
@@ -398,7 +238,7 @@ body {
         position: static;
         margin-top: 1vh;
         margin-bottom: 1vh;
-        font-size: calc(100vw / 30);
+        font-size: calc(100vw / 27);
         grid-column-start: 1;
         grid-row-start: 3;
         justify-self: center;
@@ -409,7 +249,7 @@ body {
         grid-column-start: 1;
         grid-row-start: 4;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 9.5vw;
+        grid-template-rows: 10vw;
     }
     
     .social_links {
@@ -418,141 +258,69 @@ body {
     
     .github {
         position: static;
-        width: 8.5vw;
+        width: 9vw;
         height: auto;
     }
     
     .resume {
         position: static;
-        width: 9.5vw;
+        width: 10vw;
         height: auto;
     }
 
     /* clouds */
-    .clouds_1 {
-        z-index: 3;
+    #clouds_mobile {
         position: absolute;
         width: auto;
-        height: 29vh;
         left: 100vw;
+    }
+
+    .clouds_1 {
+        z-index: 3;
+        height: 29vh;
         top: 5vh;
         animation: move_cloud 25s linear infinite;
         animation-delay: 0s;
     }
-    
     .clouds_2 {
         z-index: 1;
-        position: absolute;
-        width: auto;
         height: 20vh;
-        left: 100vw;
         top: 0vh;
         animation: move_cloud 27s linear infinite;
         animation-delay: 5s;
     }
-
     .clouds_3 {
         z-index: 4;
-        position: absolute;
-        width: auto;
         height: 26vh;
-        left: 100vw;
         top: 3vh;
         animation: move_cloud 26s linear infinite;
         animation-delay: 7s;
     }
-
     .clouds_4 {
         z-index: 3;
-        position: absolute;
-        width: auto;
         height: 27vh;
-        left: 100vw;
         top: 0vh;
         animation: move_cloud 30s linear infinite;
         animation-delay: 12s;
     }
 
-    .flowers_1 {
-        z-index: 1;
+    /* flowers */
+    #flowers_mobile {
         position: absolute;
         width: 10vw;
-        height: auto;
-        left: 5vw;
+        height: 10vw;
         top: 90vh;
     }
-    
-    .flowers_2 {
-        z-index: 1;
-        position: absolute;
-        width: 10vw;
-        height: auto;
-        left: 15vw;
-        top: 90vh;
-    }
-    
-    .flowers_3 {
-        z-index: 1;
-        position: absolute;
-        width: 10vw;
-        height: auto;
-        left: 25vw;
-        top: 90vh;
-    }
-    
-    .flowers_4 {
-        z-index: 1;
-        position: absolute;
-        width: 10vw;
-        height: auto;
-        left: 35vw;
-        top: 90vh;
-    }
-    
-    .flowers_5 {
-        z-index: 1;
-        position: absolute;
-        width: 10vw;
-        height: auto;
-        left: 45vw;
-        top: 90vh;
-    }
-    
-    .flowers_6 {
-        z-index: 1;
-        position: absolute;
-        width: 10vw;
-        height: auto;
-        left: 55vw;
-        top: 90vh;
-    }
-    
-    .flowers_7 {
-        z-index: 1;
-        position: absolute;
-        width: 10vw;
-        height: auto;
-        left: 65vw;
-        top: 90vh;
-    }
-    
-    .flowers_8 {
-        z-index: 1;
-        position: absolute;
-        width: 10vw;
-        height: auto;
-        left: 75vw;
-        top: 90vh;
-    }
-    
-    .flowers_9 {
-        z-index: 1;
-        position: absolute;
-        width: 10vw;
-        height: auto;
-        left: 85vw;
-        top: 90vh;
-    }
+
+    .flowers_1 { left: 5vw; }
+    .flowers_2 { left: 15vw; }
+    .flowers_3 { left: 25vw; }
+    .flowers_4 { left: 35vw; }
+    .flowers_5 { left: 45vw; }
+    .flowers_6 { left: 55vw; }
+    .flowers_7 { left: 65vw; }
+    .flowers_8 { left: 75vw; }
+    .flowers_9 { left: 85vw; }
 }
 
 
