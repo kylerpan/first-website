@@ -68,10 +68,11 @@ img:hover{
     opacity: 70%;
 }
 
-.preview-window {
+#preview-window {
     overflow-y: auto;
     overflow-x: hidden;
-    display: block;
+    display: none;
+    place-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -83,12 +84,15 @@ img:hover{
 }
 
 .preview-image {
+    z-index: 2;
     display: block;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    margin: auto;
     height: auto;
     width: 60%;
+}
+
+.preview-window img:hover {
     opacity: 100%;
 }
 
