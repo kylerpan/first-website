@@ -1,6 +1,7 @@
 body {
     overflow-y: auto;
     overflow-x: hidden;
+    overscroll-behavior: none;
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -10,15 +11,15 @@ body {
 
 h1 {
     position: static;
-    margin: 10px 0 15px 25px;
+    margin: 10px 0 15px 25px;   
     font-size: calc(100vh / 25);
 }
 
-.content-mobile {
+#content-mobile {
     display: none;
 }
 
-.content-desktop {
+#content-desktop {
     display: grid;
     place-content: center;
     margin: 0;
@@ -31,7 +32,7 @@ h1 {
     max-width: 1500px; 
     display: grid;
     margin-left: 10px;
-    margin-right: 26px;
+    margin-right: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 10px;
 }
@@ -68,7 +69,7 @@ img:hover{
     opacity: 70%;
 }
 
-#preview-window {
+#preview-window-d {
     overflow-y: auto;
     overflow-x: hidden;
     display: none;
@@ -80,7 +81,7 @@ img:hover{
     height: 100vh;
     width: 100vw;
     margin-top: 0;
-    background-color: rgba(0,0,0, 0.8);
+    background-color: rgba(0,0,0,0.8);
 }
 
 .preview-image {
@@ -89,23 +90,24 @@ img:hover{
     padding-top: 2vh;
     padding-bottom: 2vh;
     height: auto;
-    width: 60%;
+    width: 55%; 
+    animation: zoom 0.5s;
 }
 
-.preview-window img:hover {
+#preview-window-d img:hover {
     opacity: 100%;
 }
 
 @media only screen and (max-width: 600px){
 
-    .content-mobile {
+    #content-mobile {
         display: grid;
         margin: 0;
         height: 100vh;
         width: 100vw;
     }
     
-    .content-desktop {
+    #content-desktop {
         display: none;
     }
 
@@ -121,5 +123,45 @@ img:hover{
         display: block;
         object-fit: cover;
         margin-bottom: 10px;
+    }
+
+    img:hover{
+        opacity: 100%;
+    }
+
+    #preview-window-m {
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: none;
+        place-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 100vh;
+        width: 100vw;
+        margin-top: 0;
+        background-color: rgba(0,0,0,0.8);
+    }
+    
+    .preview-image {
+        z-index: 2;
+        display: block;
+        padding-top: 2vh;
+        padding-bottom: 2vh;    
+        height: auto;
+        width: calc(100vw - 20px);
+        animation: zoom 0.5s;
+    }
+    
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
     }
 }
