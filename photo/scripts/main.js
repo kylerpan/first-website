@@ -2,7 +2,7 @@
 var content_desktop = document.getElementById('content-desktop');
 var desktop_images = content_desktop.getElementsByTagName('img');
 var desktop_feature_image = desktop_images[0];
-var desktop_preview = document.getElementById("preview-window-d")
+var desktop_preview = document.getElementById("preview-window-d");
 
 for (let i in desktop_images){
     let image = desktop_images[i];
@@ -20,6 +20,24 @@ for (let i in desktop_images){
 
 desktop_preview.onclick = function() {
     desktop_preview.style.display = "none";
+}
+
+
+var hamburger_icon = document.getElementById('hamburger-icon');
+var sidebar_window = document.getElementById('sidebar-window');
+var sidebar_open_space = document.getElementById('sidebar-open-space');
+console.log(hamburger_icon);
+console.log(sidebar_window);
+console.log(sidebar_open_space);
+
+hamburger_icon.onclick = function() {
+    console.log("clicked");
+    sidebar_window.style.display = "grid";
+}
+
+sidebar_open_space.onclick = function() {
+    sidebar_window.style.display = "none";
+    console.log("clicked");
 }
 
 
