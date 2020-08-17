@@ -24,15 +24,15 @@ desktop_preview.onclick = function() {
 
 
 var hamburger_icon = document.getElementById('hamburger-icon');
-var sidebar_window = document.getElementById('sidebar-window');
-var sidebar_open_space = document.getElementById('sidebar-open-space');
+var sidebar_window = document.getElementById('sidebar-window-d');
+var sidebar_open_space = document.getElementById('sidebar-open-space-d');
 console.log(hamburger_icon);
 console.log(sidebar_window);
 console.log(sidebar_open_space);
 
 hamburger_icon.onclick = function() {
     console.log("clicked");
-    sidebar_window.style.display = "grid";
+    sidebar_window.style.display = "block";
 }
 
 sidebar_open_space.onclick = function() {
