@@ -255,7 +255,7 @@ body {
         display: grid;
         grid-column-start: 1;
         grid-row-start: 4;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 10vw;
     }
     
@@ -274,6 +274,11 @@ body {
         width: 10vw;
         height: auto;
     }
+    .album {
+        position: static;
+        width: 10vw;
+        height: auto;
+    }    
 
     /* clouds */
     #clouds_mobile {

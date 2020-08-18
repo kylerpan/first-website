@@ -7,7 +7,6 @@ body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    font-family: 'Arya';
     display: grid;
 }
 
@@ -39,6 +38,7 @@ h1 {
     grid-column-start: 1;
     align-self: center;
     justify-self: start;
+    font-family: 'Arya';
 }
 
 #hamburger-icon {
@@ -75,7 +75,7 @@ h1 {
     animation:  fade_in 1s;
 }
 
-.sidebar {
+.sidebar-d {
     background-color: rgba(0,0,0,0.85);
     position: fixed;
     top: 0;
@@ -84,45 +84,36 @@ h1 {
     width: 200px;
     display: grid;
     text-align: center;
-    text-justify: center;
     animation: sidebar_slide 0.4s;
     grid-template-rows: 10px repeat(3, 60px);
 }
 
 .close {
-    position: static;
-    height: 100%;
-    width: 100%;
     grid-row-start: 2;
-    color: #a9a9a9;
-    font-size: 30px;
-    justify-self: center;
-    align-self: center;
-    margin: 0;
 }
 
 .portrait {
-    position: static;
-    height: 100%;
-    width: 100%;
     grid-row-start: 3;
-    color: #a9a9a9;
-    font-size: 30px;
-    justify-self: center;
-    align-self: center;
-    margin: 0;
 }
 
 .landscape {
+    grid-row-start: 4;
+}
+
+p {
     position: static;
     height: 100%;
     width: 100%;
-    grid-row-start: 4;
     color: #a9a9a9;
-    font-size: 30px;
-    justify-self: center;
-    align-self: center;
+    font-size: 25px;
     margin: 0;
+    font-family: 'Oswald';
+}
+
+p:hover {
+    background-color: rgba(255,255,255,0.7);
+    color: black;
+    cursor: pointer;
 }
 
 /* images */
@@ -214,6 +205,19 @@ img {
     
     #content-desktop {
         display: none;
+    }
+
+    .sidebar-m {
+        background-color: rgba(0,0,0,0.85);
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 200px;
+        display: grid;
+        text-align: center;
+        animation: sidebar_slide 0.4s;
+        grid-template-rows: 20px repeat(3, 60px);
     }
     
     /* images */

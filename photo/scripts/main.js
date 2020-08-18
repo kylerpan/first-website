@@ -22,29 +22,6 @@ desktop_preview.onclick = function() {
     desktop_preview.style.display = "none";
 }
 
-/* for universal sidebar */
-var hamburger_icon = document.getElementById('hamburger-icon');
-var sidebar_windows = document.getElementsByClassName('sidebar-window');
-var sidebar_open_spaces = document.getElementsByClassName('sidebar-open-space');
-var desktop_sidebar_window = sidebar_windows[0];
-var mobile_sidebar_window = sidebar_windows[1];
-var desktop_sidebar_open_space = sidebar_windows[0];
-var mobile_sidebar_open_space = sidebar_windows[1];
-
-hamburger_icon.onclick = function() {
-    console.log("clicked");
-    desktop_sidebar_window.style.display = "block";
-    mobile_sidebar_window.style.display = "block";
-}
-
-desktop_sidebar_open_space.onclick = function() {
-    desktop_sidebar_window.style.display = "none";
-}
-
-mobile_sidebar_open_space.onclick = function() {
-    mobile_sidebar_window.style.display = "none";
-}
-
 /* for mobile preview */
 var content_mobile = document.getElementById('content-mobile');
 var mobile_images = content_mobile.getElementsByTagName('img');
@@ -66,3 +43,42 @@ for (let i in mobile_images){
 mobile_preview.onclick = function() {
     mobile_preview.style.display = "none";
 }
+
+/* for universal general sidebar */
+var hamburger_icon = document.getElementById('hamburger-icon');
+var sidebar_windows = document.getElementsByClassName('sidebar-window');
+var sidebar_open_spaces = document.getElementsByClassName('sidebar-open-space');
+var desktop_sidebar_window = sidebar_windows[0];
+var mobile_sidebar_window = sidebar_windows[1];
+var desktop_sidebar_open_space = sidebar_open_spaces[0];
+var mobile_sidebar_open_space = sidebar_open_spaces[1];
+
+hamburger_icon.onclick = function() {
+    desktop_sidebar_window.style.display = "block";
+    mobile_sidebar_window.style.display = "block";
+}
+
+desktop_sidebar_open_space.onclick = function() {
+    desktop_sidebar_window.style.display = "none";
+}
+
+mobile_sidebar_open_space.onclick = function() {
+    mobile_sidebar_window.style.display = "none";
+}
+
+/* for desktop sidebar */
+var desktop_sidebar_tags = content_desktop.getElementsByTagName('p');
+var desktop_close_sidebar = desktop_sidebar_tags[0];
+
+desktop_close_sidebar.onclick = function() {
+    desktop_sidebar_window.style.display = "none";
+}
+
+/* for mobile sidebar */
+var mobile_sidebar_tags = content_mobile.getElementsByTagName('p');
+var mobile_close_sidebar = mobile_sidebar_tags[0];
+
+mobile_close_sidebar.onclick = function() {
+    mobile_sidebar_window.style.display = "none";
+}
+
