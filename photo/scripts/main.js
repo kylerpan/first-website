@@ -68,9 +68,27 @@ mobile_sidebar_open_space.onclick = function() {
 
 /* for desktop sidebar */
 var desktop_sidebar_tags = content_desktop.getElementsByTagName('p');
-var desktop_close_sidebar = desktop_sidebar_tags[0];
+var desktop_close_tag = desktop_sidebar_tags[0];
+var desktop_portrait_tag = desktop_sidebar_tags[1];
+var desktop_landscape_tag = desktop_sidebar_tags[2];
+var desktop_portraits = content_desktop.getElementsByClassName('portraits');
+var desktop_landscapes = content_desktop.getElementsByClassName('landscapes');
+var desktop_portrait = desktop_portraits[0];
+var desktop_landscape = desktop_landscapes[0];
 
-desktop_close_sidebar.onclick = function() {
+desktop_close_tag.onclick = function() {
+    desktop_sidebar_window.style.display = "none";
+}
+
+desktop_portrait_tag.onclick = function() {
+    desktop_portrait.style.display = "block";
+    desktop_landscape.style.display = "none";
+    desktop_sidebar_window.style.display = "none";
+}
+
+desktop_landscape_tag.onclick = function() {
+    desktop_portrait.style.display = "none";
+    desktop_landscape.style.display = "block";
     desktop_sidebar_window.style.display = "none";
 }
 
