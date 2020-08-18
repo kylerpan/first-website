@@ -99,6 +99,13 @@ body {
     grid-column-start: 2;
 }
 
+.album {
+    position: static;
+    width: 4vw;
+    height: auto;
+    grid-column-start: 3;
+}
+
 /* clouds */
 #clouds_desktop {
     position: absolute;

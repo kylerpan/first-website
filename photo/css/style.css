@@ -35,8 +35,7 @@ body {
 
 h1 {
     margin-left: 25px; 
-    margin-bottom: 0px; 
-    font-size: 35px;
+    font-size: 45px;
     grid-column-start: 1;
     align-self: center;
     justify-self: start;
@@ -44,8 +43,7 @@ h1 {
 
 #hamburger-icon {
     margin-right: 25px;
-    margin-top: 25px;
-    font-size: 25px;
+    font-size: 35px;
     cursor: pointer;
     grid-column-start: 2;
     align-self: center;
@@ -63,7 +61,7 @@ h1 {
     position: fixed;
     height: 100vh;
     width: 100vw;
-    display: none;
+    display: block;
 }
 
 .sidebar-open-space {
@@ -84,8 +82,47 @@ h1 {
     right: 0;
     height: 100vh;
     width: 200px;
-    display: block;
+    display: grid;
+    text-align: center;
+    text-justify: center;
     animation: sidebar_slide 0.4s;
+    grid-template-rows: 10px repeat(3, 60px);
+}
+
+.close {
+    position: static;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    color: #a9a9a9;
+    font-size: 30px;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+}
+
+.portrait {
+    position: static;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 3;
+    color: #a9a9a9;
+    font-size: 30px;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+}
+
+.landscape {
+    position: static;
+    height: 100%;
+    width: 100%;
+    grid-row-start: 4;
+    color: #a9a9a9;
+    font-size: 30px;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
 }
 
 /* images */
