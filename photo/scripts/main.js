@@ -44,6 +44,7 @@ mobile_preview.onclick = function() {
     mobile_preview.style.display = "none";
 }
 
+
 /* for universal general sidebar */
 var hamburger_icon = document.getElementById('hamburger-icon');
 var sidebar_windows = document.getElementsByClassName('sidebar-window');
@@ -95,8 +96,27 @@ desktop_landscape_tag.onclick = function() {
 /* for mobile sidebar */
 var mobile_sidebar_tags = content_mobile.getElementsByTagName('p');
 var mobile_close_sidebar = mobile_sidebar_tags[0];
+var mobile_close_tag = mobile_sidebar_tags[0];
+var mobile_portrait_tag = mobile_sidebar_tags[1];
+var mobile_landscape_tag = mobile_sidebar_tags[2];
+var mobile_portraits = content_mobile.getElementsByClassName('portraits');
+var mobile_landscapes = content_mobile.getElementsByClassName('landscapes');
+var mobile_portrait = mobile_portraits[0];
+var mobile_landscape = mobile_landscapes[0];
 
 mobile_close_sidebar.onclick = function() {
+    mobile_sidebar_window.style.display = "none";
+}
+
+mobile_portrait_tag.onclick = function() {
+    mobile_portrait.style.display = "block";
+    mobile_landscape.style.display = "none";
+    mobile_sidebar_window.style.display = "none";
+}
+
+mobile_landscape_tag.onclick = function() {
+    mobile_portrait.style.display = "none";
+    mobile_landscape.style.display = "block";
     mobile_sidebar_window.style.display = "none";
 }
 
