@@ -5,6 +5,7 @@ body {
     top: 0;
     left: 0;
     margin: 0;
+    padding: 0;
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -28,7 +29,7 @@ body {
     height: 100px;
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: calc(100vw - 80px) 80px;
     grid-template-rows: 100px;
 }
 
@@ -56,6 +57,7 @@ h1 {
 
 /* sidebar */
 .sidebar-window {
+    z-index: 1;
     top: 0;
     left: 0;
     position: fixed;
@@ -85,19 +87,23 @@ h1 {
     display: grid;
     text-align: center;
     animation: sidebar_slide 0.4s;
-    grid-template-rows: 10px repeat(3, 60px);
+    grid-template-rows: 10px repeat(4, 60px);
 }
 
-.close {
+.close-tag {
     grid-row-start: 2;
 }
 
-.portrait {
+.portrait-tag {
     grid-row-start: 3;
 }
 
-.landscape {
+.landscape-tag {
     grid-row-start: 4;
+}
+
+.about-me-tag {
+    grid-row-start: 5;
 }
 
 p {
@@ -118,15 +124,33 @@ p:hover {
 
 /* images */
 .portraits {
+    position: static;
     height: 100vh;
     max-width: 1500px; 
     display: block;
+    animation: fade_in 2s;
 }
 
 .landscapes {
+    position: static;
     height: 100vh;
     max-width: 1500px;
     display: none; 
+    animation: fade_in 2s;
+}
+
+.about-me {
+    position: static;
+    height: 100vh;
+    max-width: 1500px;
+    display: none; 
+    animation: fade_in 2s;
+}
+
+.about-me-image {
+    height: auto;
+    width: 55vw;
+    align-self: center;
 }
 
 .image-wrapper {
@@ -202,6 +226,15 @@ img {
 
 #preview-window-d img:hover {
     opacity: 100%;
+}
+
+#bottom {
+    bottom: 0;
+    left: 0;
+    position: static;
+    height: 100px;
+    width: 100vw;
+    background-color: grey;
 }
 
 

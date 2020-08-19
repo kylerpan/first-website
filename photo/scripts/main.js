@@ -72,10 +72,10 @@ var desktop_sidebar_tags = content_desktop.getElementsByTagName('p');
 var desktop_close_tag = desktop_sidebar_tags[0];
 var desktop_portrait_tag = desktop_sidebar_tags[1];
 var desktop_landscape_tag = desktop_sidebar_tags[2];
-var desktop_portraits = content_desktop.getElementsByClassName('portraits');
-var desktop_landscapes = content_desktop.getElementsByClassName('landscapes');
-var desktop_portrait = desktop_portraits[0];
-var desktop_landscape = desktop_landscapes[0];
+var desktop_about_me_tag = desktop_sidebar_tags[3];
+var desktop_portrait = content_desktop.getElementsByClassName('portraits')[0];
+var desktop_landscape = content_desktop.getElementsByClassName('landscapes')[0];
+var desktop_about_me = content_desktop.getElementsByClassName('about-me')[0];
 
 desktop_close_tag.onclick = function() {
     desktop_sidebar_window.style.display = "none";
@@ -84,27 +84,33 @@ desktop_close_tag.onclick = function() {
 desktop_portrait_tag.onclick = function() {
     desktop_portrait.style.display = "block";
     desktop_landscape.style.display = "none";
+    desktop_about_me.style.display = "none";
     desktop_sidebar_window.style.display = "none";
 }
 
 desktop_landscape_tag.onclick = function() {
     desktop_portrait.style.display = "none";
     desktop_landscape.style.display = "block";
+    desktop_about_me.style.display = "none";
+    desktop_sidebar_window.style.display = "none";
+}
+
+desktop_about_me_tag.onclick = function() {
+    desktop_portrait.style.display = "none";
+    desktop_landscape.style.display = "none";
+    desktop_about_me.style.display = "block";
     desktop_sidebar_window.style.display = "none";
 }
 
 /* for mobile sidebar */
 var mobile_sidebar_tags = content_mobile.getElementsByTagName('p');
-var mobile_close_sidebar = mobile_sidebar_tags[0];
 var mobile_close_tag = mobile_sidebar_tags[0];
 var mobile_portrait_tag = mobile_sidebar_tags[1];
 var mobile_landscape_tag = mobile_sidebar_tags[2];
-var mobile_portraits = content_mobile.getElementsByClassName('portraits');
-var mobile_landscapes = content_mobile.getElementsByClassName('landscapes');
-var mobile_portrait = mobile_portraits[0];
-var mobile_landscape = mobile_landscapes[0];
+var mobile_portraits = content_mobile.getElementsByClassName('portraits')[0];
+var mobile_landscapes = content_mobile.getElementsByClassName('landscapes')[0];
 
-mobile_close_sidebar.onclick = function() {
+mobile_close_tag.onclick = function() {
     mobile_sidebar_window.style.display = "none";
 }
 
@@ -120,3 +126,8 @@ mobile_landscape_tag.onclick = function() {
     mobile_sidebar_window.style.display = "none";
 }
 
+/* height of website */
+var bodies = document.getElementsByTagName('body');
+var body = bodies[0];
+var body_height = body.scrollHeight;
+console.log(body_height);
