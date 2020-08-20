@@ -68,7 +68,7 @@ mobile_sidebar_open_space.onclick = function() {
 }
 
 /* for desktop sidebar */
-var desktop_sidebar_tags = content_desktop.getElementsByTagName('p');
+var desktop_sidebar_tags = content_desktop.getElementsByTagName('h3');
 var desktop_close_tag = desktop_sidebar_tags[0];
 var desktop_portrait_tag = desktop_sidebar_tags[1];
 var desktop_landscape_tag = desktop_sidebar_tags[2];
@@ -103,7 +103,7 @@ desktop_about_me_tag.onclick = function() {
 }
 
 /* for mobile sidebar */
-var mobile_sidebar_tags = content_mobile.getElementsByTagName('p');
+var mobile_sidebar_tags = content_mobile.getElementsByTagName('h3');
 var mobile_close_tag = mobile_sidebar_tags[0];
 var mobile_portrait_tag = mobile_sidebar_tags[1];
 var mobile_landscape_tag = mobile_sidebar_tags[2];
