@@ -154,6 +154,8 @@ h3:hover {
     position: static;
     height: 100vh;
     max-width: 1500px;
+    margin-left: 10px;
+    margin-right: 16px;
     display: none; 
     animation: fade_in 2s;
 }
@@ -261,9 +263,11 @@ img {
 
     #content-mobile {
         display: grid;
+        place-content: center;
         margin: 0;
-        height: 100vh;
+        min-height: 100vh;
         width: 100vw;
+        margin-bottom: 100px;
     }
     
     #content-desktop {
@@ -280,13 +284,15 @@ img {
         display: grid;
         text-align: center;
         animation: sidebar_slide 0.4s;
-        grid-template-rows: 20px repeat(3, 60px);
+        grid-template-rows: 20px repeat(4, 60px);
     }
     
     /* images */
     .image-wrapper {
         height: 100vh;
         width: calc(100vw - 20px); 
+        margin-left: 10px;
+        margin-right: 10px;
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -301,6 +307,29 @@ img {
 
     img:hover{
         opacity: 100%;
+    }
+
+    .about-me {
+        position: static;
+        height: 100vh;
+        max-width: calc(100vw - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+        display: none; 
+        animation: fade_in 2s;
+    }
+
+    .about-me-image {
+        height: auto;
+        width: calc(100vw - 20px);
+        align-self: center;
+    }
+
+    p {
+        position: static; 
+        width: calc(100vw - 20px);
+        font-size: 17px;
+        font-family: 'Oswald';
     }
 
     #preview-window-m {
