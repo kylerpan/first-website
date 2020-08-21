@@ -69,7 +69,7 @@ mobile_sidebar_open_space.onclick = function() {
 
 /* height of website */
 var body = document.getElementsByTagName('body')[0];
-var body_height = String(body.scrollHeight + 100) + "px";
+var body_height = String(body.scrollHeight) + "px";
 body.style.height = body_height;
 console.log(body_height);
 
@@ -93,7 +93,7 @@ desktop_portrait_tag.onclick = function() {
     desktop_about_me.style.display = "none";
     desktop_sidebar_window.style.display = "none";
     body.style.height = "auto";
-    body_height = String(body.scrollHeight + 100) + "px";
+    body_height = String(body.scrollHeight) + "px";
     body.style.height = body_height;
     console.log(body_height);
 }
@@ -104,7 +104,7 @@ desktop_landscape_tag.onclick = function() {
     desktop_about_me.style.display = "none";
     desktop_sidebar_window.style.display = "none";
     body.style.height = "auto";
-    body_height = String(body.scrollHeight + 100) + "px";
+    body_height = String(body.scrollHeight) + "px";
     body.style.height = body_height;
     console.log(body_height);
 }
@@ -115,7 +115,7 @@ desktop_about_me_tag.onclick = function() {
     desktop_about_me.style.display = "block";
     desktop_sidebar_window.style.display = "none";
     body.style.height = "auto";
-    body_height = String(body.scrollHeight + 100) + "px";
+    body_height = String(body.scrollHeight) + "px";
     body.style.height = body_height;
     console.log(body_height);
 }
