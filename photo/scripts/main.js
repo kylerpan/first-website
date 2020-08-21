@@ -67,6 +67,12 @@ mobile_sidebar_open_space.onclick = function() {
     mobile_sidebar_window.style.display = "none";
 }
 
+/* height of website */
+var body = document.getElementsByTagName('body')[0];
+var body_height = String(body.scrollHeight + 100) + "px";
+body.style.height = body_height;
+console.log(body_height);
+
 /* for desktop sidebar */
 var desktop_sidebar_tags = content_desktop.getElementsByTagName('h3');
 var desktop_close_tag = desktop_sidebar_tags[0];
@@ -86,6 +92,10 @@ desktop_portrait_tag.onclick = function() {
     desktop_landscape.style.display = "none";
     desktop_about_me.style.display = "none";
     desktop_sidebar_window.style.display = "none";
+    body.style.height = "auto";
+    body_height = String(body.scrollHeight + 100) + "px";
+    body.style.height = body_height;
+    console.log(body_height);
 }
 
 desktop_landscape_tag.onclick = function() {
@@ -93,6 +103,10 @@ desktop_landscape_tag.onclick = function() {
     desktop_landscape.style.display = "block";
     desktop_about_me.style.display = "none";
     desktop_sidebar_window.style.display = "none";
+    body.style.height = "auto";
+    body_height = String(body.scrollHeight + 100) + "px";
+    body.style.height = body_height;
+    console.log(body_height);
 }
 
 desktop_about_me_tag.onclick = function() {
@@ -100,6 +114,10 @@ desktop_about_me_tag.onclick = function() {
     desktop_landscape.style.display = "none";
     desktop_about_me.style.display = "block";
     desktop_sidebar_window.style.display = "none";
+    body.style.height = "auto";
+    body_height = String(body.scrollHeight + 100) + "px";
+    body.style.height = body_height;
+    console.log(body_height);
 }
 
 /* for mobile sidebar */
@@ -138,10 +156,3 @@ mobile_about_me_tag.onclick = function() {
     mobile_about_me.style.display = "block";
     mobile_sidebar_window.style.display = "none";
 }
-
-/* height of website */
-var bodies = document.getElementsByTagName('body');
-var body = bodies[0];
-var body_height = body.scrollHeight;
-// body.style.height = body_height; 
-console.log(body_height);
