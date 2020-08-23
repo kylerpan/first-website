@@ -2,21 +2,18 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    /* background-color: red; */
     width: 100vw
 }
 
 body {
     overflow-y: auto;
     overflow-x: hidden;
-    /* overscroll-behavior: none; */
     top: 0;
     left: 0;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     height: auto;
-    /* background-color: blue; */
     width: 100vw;
     display: block;
 }
@@ -29,7 +26,6 @@ body {
     position: static;
     display: grid;
     justify-content: center;
-    margin: 0;
     height: calc(100% - 180px);
     width: 100vw;
 }

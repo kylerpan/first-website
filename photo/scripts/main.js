@@ -69,9 +69,19 @@ mobile_sidebar_open_space.onclick = function() {
 
 /* height of website */
 var body = document.getElementsByTagName('body')[0];
+body.style.height = "auto";
 var body_height = String(body.scrollHeight) + "px";
 body.style.height = body_height;
 console.log(body_height);
+
+function resize_body(){
+    body.style.height = "auto";
+    var body_height = String(body.scrollHeight) + "px";
+    body.style.height = body_height;
+    console.log(body_height);
+}
+window.addEventListener("resize", resize_body);
+
 
 /* for desktop sidebar */
 var desktop_sidebar_tags = content_desktop.getElementsByTagName('h3');
