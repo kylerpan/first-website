@@ -1,4 +1,4 @@
-/* for desktop preview */
+/* || Desktop Preview Image */
 var content_desktop = document.getElementById('content-desktop');
 var content_mobile = document.getElementById('content-mobile');
 var desktop_images = content_desktop.getElementsByTagName('img');
@@ -22,7 +22,7 @@ desktop_preview.onclick = function() {
     desktop_preview.style.display = "none";
 }
 
-/* for mobile preview */
+/* || Mobile Preview Image */
 var content_mobile = document.getElementById('content-mobile');
 var mobile_images = content_mobile.getElementsByTagName('img');
 var mobile_feature_image = mobile_images[0];
@@ -45,7 +45,23 @@ mobile_preview.onclick = function() {
 }
 
 
-/* for universal general sidebar */
+/* || Height of Website */
+var body = document.getElementsByTagName('body')[0];
+body.style.height = "auto";
+var body_height = String(body.scrollHeight) + "px";
+body.style.height = body_height;
+console.log(body_height);
+
+function resize_body(){
+    body.style.height = "auto";
+    var body_height = String(body.scrollHeight) + "px";
+    body.style.height = body_height;
+    console.log(body_height);
+}
+window.addEventListener("resize", resize_body);
+
+
+/* || Preview Sidebar */
 var hamburger_icon = document.getElementById('hamburger-icon');
 var sidebar_windows = document.getElementsByClassName('sidebar-window');
 var sidebar_open_spaces = document.getElementsByClassName('sidebar-open-space');
@@ -67,23 +83,7 @@ mobile_sidebar_open_space.onclick = function() {
     mobile_sidebar_window.style.display = "none";
 }
 
-/* height of website */
-var body = document.getElementsByTagName('body')[0];
-body.style.height = "auto";
-var body_height = String(body.scrollHeight) + "px";
-body.style.height = body_height;
-console.log(body_height);
-
-function resize_body(){
-    body.style.height = "auto";
-    var body_height = String(body.scrollHeight) + "px";
-    body.style.height = body_height;
-    console.log(body_height);
-}
-window.addEventListener("resize", resize_body);
-
-
-/* for desktop sidebar */
+/* || Desktop Sidebar Onclicks*/
 var desktop_sidebar_tags = content_desktop.getElementsByTagName('h3');
 var desktop_close_tag = desktop_sidebar_tags[0];
 var desktop_portrait_tag = desktop_sidebar_tags[1];
@@ -130,7 +130,7 @@ desktop_about_me_tag.onclick = function() {
     console.log(body_height);
 }
 
-/* for mobile sidebar */
+/* || Mobile Sidebar Onclicks*/
 var mobile_sidebar_tags = content_mobile.getElementsByTagName('h3');
 var mobile_close_tag = mobile_sidebar_tags[0];
 var mobile_portrait_tag = mobile_sidebar_tags[1];
