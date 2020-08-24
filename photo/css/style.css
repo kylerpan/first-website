@@ -243,25 +243,26 @@ p {
 
 /* || Footer */
 #footer {
-    background-color: grey;
+    background-color: black;
     margin: 0;
-    height: 150px;
+    height: 180px;
     width: 100vw;
     display: grid;
 }
 
 .footer-content {
-    margin: 10px 26px 0 10px;
+    margin: 20px 26px 0 30px;
     height: 130px;
-    width: calc(100vw - 36px);
+    width: calc(100vw - 76px);
     display: grid;
-    grid-template-columns: repeat(2, calc(50vw - 18px));
+    grid-template-columns: repeat(2, calc(50vw - 38px));
     grid-template-rows: repeat(5, 1fr);
 }
 
 .footer-title {
+    color: #f8f8ff;
     font-family: 'Oswald';
-    font-size: 20px;
+    font-size: 25px;
     margin: 0;
     height: 100%;
     width: 100%;
@@ -278,12 +279,15 @@ p {
     grid-column-start: 2;
 }
 
-.footer-others {
+.footer-get-in-touch-content {
+    color: #a9a9a9;
     font-family: 'Oswald';
-    font-size: 10px;
+    font-size: 15px;
     margin: 0;
     height: 100%;
-    width: 100%;
+    width: auto;
+    justify-self: left;
+    text-align: left;
     cursor: default;
 }
 
@@ -303,33 +307,36 @@ p {
     cursor: pointer;
 }
 
+.footer-navigation-content{
+    color: #a9a9a9;
+    font-family: 'Oswald';
+    font-size: 15px;
+    margin: 0;
+    height: 100%;
+    width: auto;
+    justify-self: right;
+    text-align: right;
+    cursor: pointer;
+}
 
 .back-to-top {
     grid-row-start: 2;
     grid-column-start: 2;
-    text-align: right;
-    cursor: pointer;
 }
 
 .portrait-footer-access {
     grid-row-start: 3;
     grid-column-start: 2;
-    text-align: right;
-    cursor: pointer;
 }
 
 .landscape-footer-access {
     grid-row-start: 4;
     grid-column-start: 2;
-    text-align: right;
-    cursor: pointer;
 }
 
 .about-me-footer-access {
     grid-row-start: 5;
     grid-column-start: 2;
-    text-align: right;
-    cursor: pointer;
 }
 
 
@@ -337,11 +344,10 @@ p {
 @media only screen and (max-width: 600px){
 
     #content-mobile {
-        margin: 0 0 100px 0;
-        min-height: 100vh;
+        height: calc(100% - 80px);
         width: 100vw;
         display: grid;
-        place-content: center;
+        justify-content: center;
     }
     
     #content-desktop {
@@ -392,7 +398,8 @@ p {
 
     p {
         font-family: 'Times New Roman';
-        font-size: xx-small;
+        font-size: 20px;
+        height: auto;
         width: calc(100vw - 20px);
     }
 
@@ -432,7 +439,6 @@ p {
         display: block;
         animation: zoom 0.5s;
     }
-    
 }
 
 

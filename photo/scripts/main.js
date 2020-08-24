@@ -47,10 +47,6 @@ mobile_preview.onclick = function() {
 
 /* || Height of Website */
 var body = document.getElementsByTagName('body')[0];
-body.style.height = "auto";
-var body_height = String(body.scrollHeight) + "px";
-body.style.height = body_height;
-console.log(body_height);
 
 function resize_body(){
     body.style.height = "auto";
@@ -58,17 +54,17 @@ function resize_body(){
     body.style.height = body_height;
     console.log(body_height);
 }
+
+resize_body();
 window.addEventListener("resize", resize_body);
 
 
 /* || Preview Sidebar */
 var hamburger_icon = document.getElementById('hamburger-icon');
-var sidebar_windows = document.getElementsByClassName('sidebar-window');
-var sidebar_open_spaces = document.getElementsByClassName('sidebar-open-space');
-var desktop_sidebar_window = sidebar_windows[0];
-var mobile_sidebar_window = sidebar_windows[1];
-var desktop_sidebar_open_space = sidebar_open_spaces[0];
-var mobile_sidebar_open_space = sidebar_open_spaces[1];
+var desktop_sidebar_window = document.getElementsByClassName('sidebar-window')[0];
+var mobile_sidebar_window = document.getElementsByClassName('sidebar-window')[1];
+var desktop_sidebar_open_space = document.getElementsByClassName('sidebar-open-space')[0];
+var mobile_sidebar_open_space = document.getElementsByClassName('sidebar-open-space')[1];
 
 hamburger_icon.onclick = function() {
     desktop_sidebar_window.style.display = "block";
@@ -84,51 +80,13 @@ mobile_sidebar_open_space.onclick = function() {
 }
 
 /* || Desktop Sidebar Onclicks*/
-var desktop_sidebar_tags = content_desktop.getElementsByTagName('h3');
-var desktop_close_tag = desktop_sidebar_tags[0];
-var desktop_portrait_tag = desktop_sidebar_tags[1];
-var desktop_landscape_tag = desktop_sidebar_tags[2];
-var desktop_about_me_tag = desktop_sidebar_tags[3];
+var desktop_close_tag = content_desktop.getElementsByTagName('h3')[0];
+var desktop_portrait_tag = content_desktop.getElementsByTagName('h3')[1];
+var desktop_landscape_tag = content_desktop.getElementsByTagName('h3')[2];
+var desktop_about_me_tag = content_desktop.getElementsByTagName('h3')[3];
 var desktop_portrait = content_desktop.getElementsByClassName('portraits')[0];
 var desktop_landscape = content_desktop.getElementsByClassName('landscapes')[0];
 var desktop_about_me = content_desktop.getElementsByClassName('about-me')[0];
-
-desktop_close_tag.onclick = function() {
-    desktop_sidebar_window.style.display = "none";
-}
-
-desktop_portrait_tag.onclick = function() {
-    desktop_portrait.style.display = "block";
-    desktop_landscape.style.display = "none";
-    desktop_about_me.style.display = "none";
-    desktop_sidebar_window.style.display = "none";
-    body.style.height = "auto";
-    body_height = String(body.scrollHeight) + "px";
-    body.style.height = body_height;
-    console.log(body_height);
-}
-
-desktop_landscape_tag.onclick = function() {
-    desktop_portrait.style.display = "none";
-    desktop_landscape.style.display = "block";
-    desktop_about_me.style.display = "none";
-    desktop_sidebar_window.style.display = "none";
-    body.style.height = "auto";
-    body_height = String(body.scrollHeight) + "px";
-    body.style.height = body_height;
-    console.log(body_height);
-}
-
-desktop_about_me_tag.onclick = function() {
-    desktop_portrait.style.display = "none";
-    desktop_landscape.style.display = "none";
-    desktop_about_me.style.display = "block";
-    desktop_sidebar_window.style.display = "none";
-    body.style.height = "auto";
-    body_height = String(body.scrollHeight) + "px";
-    body.style.height = body_height;
-    console.log(body_height);
-}
 
 /* || Mobile Sidebar Onclicks*/
 var mobile_sidebar_tags = content_mobile.getElementsByTagName('h3');
@@ -140,29 +98,52 @@ var mobile_portraits = content_mobile.getElementsByClassName('portraits')[0];
 var mobile_landscapes = content_mobile.getElementsByClassName('landscapes')[0];
 var mobile_about_me = content_mobile.getElementsByClassName('about-me')[0];
 
-mobile_close_tag.onclick = function() {
+/* || Sidebar Tag Functions */
+function close_tag() {
+    desktop_sidebar_window.style.display = "none";
     mobile_sidebar_window.style.display = "none";
 }
 
-mobile_portrait_tag.onclick = function() {
+function portait_tag() {
+    desktop_portrait.style.display = "block";
+    desktop_landscape.style.display = "none";
+    desktop_about_me.style.display = "none";
     mobile_portraits.style.display = "block";
     mobile_landscapes.style.display = "none";
     mobile_about_me.style.display = "none";
-    mobile_sidebar_window.style.display = "none";
+    close_tag();
+    resize_body();
 }
 
-mobile_landscape_tag.onclick = function() {
-    console.log("clicked");
+function landspace_tag() {
+    desktop_portrait.style.display = "none";
+    desktop_landscape.style.display = "block";
+    desktop_about_me.style.display = "none";
     mobile_portraits.style.display = "none";
     mobile_landscapes.style.display = "block";
     mobile_about_me.style.display = "none";
-    mobile_sidebar_window.style.display = "none";
+    close_tag();
+    resize_body();
 }
 
-mobile_about_me_tag.onclick = function() {
-    console.log("clicked");
+function about_me_tag() {
+    desktop_portrait.style.display = "none";
+    desktop_landscape.style.display = "none";
+    desktop_about_me.style.display = "block";
     mobile_portraits.style.display = "none";
     mobile_landscapes.style.display = "none";
     mobile_about_me.style.display = "block";
-    mobile_sidebar_window.style.display = "none";
+    close_tag();
+    resize_body();
 }
+
+desktop_close_tag.addEventListener("click", close_tag);
+desktop_portrait_tag.addEventListener("click", portait_tag);
+desktop_landscape_tag.addEventListener("click", landspace_tag);
+desktop_about_me_tag.addEventListener("click", about_me_tag);
+
+mobile_close_tag.addEventListener("click", close_tag);
+mobile_portrait_tag.addEventListener("click", portait_tag);
+mobile_landscape_tag.addEventListener("click", landspace_tag);
+mobile_about_me_tag.addEventListener("click", about_me_tag);
+
