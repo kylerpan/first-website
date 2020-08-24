@@ -79,7 +79,7 @@ mobile_sidebar_open_space.onclick = function() {
     mobile_sidebar_window.style.display = "none";
 }
 
-/* || Desktop Sidebar Onclicks*/
+/* || Desktop Sidebar Onclicks */
 var desktop_close_tag = content_desktop.getElementsByTagName('h3')[0];
 var desktop_portrait_tag = content_desktop.getElementsByTagName('h3')[1];
 var desktop_landscape_tag = content_desktop.getElementsByTagName('h3')[2];
@@ -88,23 +88,34 @@ var desktop_portrait = content_desktop.getElementsByClassName('portraits')[0];
 var desktop_landscape = content_desktop.getElementsByClassName('landscapes')[0];
 var desktop_about_me = content_desktop.getElementsByClassName('about-me')[0];
 
-/* || Mobile Sidebar Onclicks*/
-var mobile_sidebar_tags = content_mobile.getElementsByTagName('h3');
-var mobile_close_tag = mobile_sidebar_tags[0];
-var mobile_portrait_tag = mobile_sidebar_tags[1];
-var mobile_landscape_tag = mobile_sidebar_tags[2];
-var mobile_about_me_tag = mobile_sidebar_tags[3];
+/* || Mobile Sidebar Onclicks */
+var mobile_close_tag = content_mobile.getElementsByTagName('h3')[0];
+var mobile_portrait_tag = content_mobile.getElementsByTagName('h3')[1];
+var mobile_landscape_tag = content_mobile.getElementsByTagName('h3')[2];
+var mobile_about_me_tag = content_mobile.getElementsByTagName('h3')[3];
 var mobile_portraits = content_mobile.getElementsByClassName('portraits')[0];
 var mobile_landscapes = content_mobile.getElementsByClassName('landscapes')[0];
 var mobile_about_me = content_mobile.getElementsByClassName('about-me')[0];
 
+/* || Footer Onclicks */
+var footer = document.getElementById("footer");
+var back_to_top = footer.getElementsByTagName('p')[5];
+var portrait_footer_tag = footer.getElementsByTagName('p')[6];
+var landscape_footer_tag = footer.getElementsByTagName('p')[7];
+var about_me_footer_tag = footer.getElementsByTagName('p')[8];
+
 /* || Sidebar Tag Functions */
+function scroll_top() {
+    window.scrollTo(0,0);
+}
+
 function close_tag() {
     desktop_sidebar_window.style.display = "none";
     mobile_sidebar_window.style.display = "none";
 }
 
-function portait_tag() {
+function portrait_tag() {
+    scroll_top();
     desktop_portrait.style.display = "block";
     desktop_landscape.style.display = "none";
     desktop_about_me.style.display = "none";
@@ -115,7 +126,8 @@ function portait_tag() {
     resize_body();
 }
 
-function landspace_tag() {
+function landscape_tag() {
+    scroll_top();
     desktop_portrait.style.display = "none";
     desktop_landscape.style.display = "block";
     desktop_about_me.style.display = "none";
@@ -127,6 +139,7 @@ function landspace_tag() {
 }
 
 function about_me_tag() {
+    scroll_top();
     desktop_portrait.style.display = "none";
     desktop_landscape.style.display = "none";
     desktop_about_me.style.display = "block";
@@ -136,14 +149,19 @@ function about_me_tag() {
     close_tag();
     resize_body();
 }
-
+ 
 desktop_close_tag.addEventListener("click", close_tag);
-desktop_portrait_tag.addEventListener("click", portait_tag);
-desktop_landscape_tag.addEventListener("click", landspace_tag);
+desktop_portrait_tag.addEventListener("click", portrait_tag);
+desktop_landscape_tag.addEventListener("click", landscape_tag);
 desktop_about_me_tag.addEventListener("click", about_me_tag);
 
 mobile_close_tag.addEventListener("click", close_tag);
-mobile_portrait_tag.addEventListener("click", portait_tag);
-mobile_landscape_tag.addEventListener("click", landspace_tag);
+mobile_portrait_tag.addEventListener("click", portrait_tag);
+mobile_landscape_tag.addEventListener("click", landscape_tag);
 mobile_about_me_tag.addEventListener("click", about_me_tag);
+
+back_to_top.addEventListener("click", scroll_top);
+portrait_footer_tag.addEventListener("click", portrait_tag);
+landscape_footer_tag.addEventListener("click", landscape_tag);
+about_me_footer_tag.addEventListener("click", about_me_tag);
 
