@@ -141,7 +141,7 @@ function landscape_tag() {
 
 function about_me_tag() {
     scroll_top();
-    console.log(desktop_portrait.style.display);
+    desktop_portrait.style.display = "none";
     desktop_landscape.style.display = "none";
     desktop_about_me.style.display = "block";
     mobile_portraits.style.display = "none";
