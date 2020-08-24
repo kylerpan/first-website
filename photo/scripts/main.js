@@ -99,10 +99,10 @@ var mobile_about_me = content_mobile.getElementsByClassName('about-me')[0];
 
 /* || Footer Onclicks */
 var footer = document.getElementById("footer");
-var back_to_top = footer.getElementsByTagName('p')[5];
-var portrait_footer_tag = footer.getElementsByTagName('p')[6];
-var landscape_footer_tag = footer.getElementsByTagName('p')[7];
-var about_me_footer_tag = footer.getElementsByTagName('p')[8];
+var back_to_top = footer.getElementsByTagName('p')[4];
+var portrait_footer_tag = footer.getElementsByTagName('p')[5];
+var landscape_footer_tag = footer.getElementsByTagName('p')[6];
+var about_me_footer_tag = footer.getElementsByTagName('p')[7];
 
 /* || Sidebar Tag Functions */
 function scroll_top() {
@@ -112,6 +112,7 @@ function scroll_top() {
 function close_tag() {
     desktop_sidebar_window.style.display = "none";
     mobile_sidebar_window.style.display = "none";
+    console.log(desktop_portrait.style.display);
 }
 
 function portrait_tag() {
@@ -140,7 +141,7 @@ function landscape_tag() {
 
 function about_me_tag() {
     scroll_top();
-    desktop_portrait.style.display = "none";
+    console.log(desktop_portrait.style.display);
     desktop_landscape.style.display = "none";
     desktop_about_me.style.display = "block";
     mobile_portraits.style.display = "none";
@@ -149,6 +150,17 @@ function about_me_tag() {
     close_tag();
     resize_body();
 }
+
+// //check for Navigation Timing API support
+// if (window.performance) {
+//     console.info("window.performance works fine on this browser");
+//   }
+//   console.info(performance.navigation.type);
+//   if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+//     console.info( "This page is reloaded" );
+//   } else {
+//     console.info( "This page is not reloaded");
+//   }  
  
 desktop_close_tag.addEventListener("click", close_tag);
 desktop_portrait_tag.addEventListener("click", portrait_tag);
