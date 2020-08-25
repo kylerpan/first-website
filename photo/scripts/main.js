@@ -1,15 +1,13 @@
 /* || Desktop Preview Image */
 var content_desktop = document.getElementById('content-desktop');
-var content_mobile = document.getElementById('content-mobile');
 var desktop_images = content_desktop.getElementsByTagName('img');
 var desktop_feature_image = desktop_images[0];
-var desktop_preview = document.getElementById("preview-window-d");
+var desktop_preview = document.getElementsByClassName("preview-window")[0];
 
 for (let i in desktop_images) {
     let image = desktop_images[i];
     if (image == desktop_feature_image) {
         continue;
-    
         }
     image.onclick = function() {
         let img_src = image.getAttribute('src');
@@ -26,7 +24,7 @@ desktop_preview.onclick = function() {
 var content_mobile = document.getElementById('content-mobile');
 var mobile_images = content_mobile.getElementsByTagName('img');
 var mobile_feature_image = mobile_images[0];
-var mobile_preview = document.getElementById("preview-window-m");
+var mobile_preview = document.getElementsByClassName("preview-window")[1];
 
 for (let i in mobile_images){
     let image = mobile_images[i];
@@ -52,47 +50,35 @@ function resize_body(){
     body.style.height = "auto";
     var body_height = String(body.scrollHeight) + "px";
     body.style.height = body_height;
-    console.log(body_height);
 }
 
 resize_body();
 window.addEventListener("resize", resize_body);
 
 
-/* || Preview Sidebar */
+/* || Sidebar */
 var hamburger_icon = document.getElementById('hamburger-icon');
-var desktop_sidebar_window = document.getElementsByClassName('sidebar-window')[0];
-var mobile_sidebar_window = document.getElementsByClassName('sidebar-window')[1];
+var sidebar_window = document.getElementsByClassName('sidebar-window')[0];
 var desktop_sidebar_open_space = document.getElementsByClassName('sidebar-open-space')[0];
-var mobile_sidebar_open_space = document.getElementsByClassName('sidebar-open-space')[1];
+var close_tag = body.getElementsByTagName('h3')[0];
+var portrait_tag = body.getElementsByTagName('h3')[1];
+var landscape_tag = body.getElementsByTagName('h3')[2];
+var about_me_tag = body.getElementsByTagName('h3')[3];
 
 hamburger_icon.onclick = function() {
-    desktop_sidebar_window.style.display = "block";
-    mobile_sidebar_window.style.display = "block";
+    sidebar_window.style.display = "block";
 }
 
 desktop_sidebar_open_space.onclick = function() {
-    desktop_sidebar_window.style.display = "none";
+    sidebar_window.style.display = "none";
 }
 
-mobile_sidebar_open_space.onclick = function() {
-    mobile_sidebar_window.style.display = "none";
-}
-
-/* || Desktop Sidebar Onclicks */
-var desktop_close_tag = content_desktop.getElementsByTagName('h3')[0];
-var desktop_portrait_tag = content_desktop.getElementsByTagName('h3')[1];
-var desktop_landscape_tag = content_desktop.getElementsByTagName('h3')[2];
-var desktop_about_me_tag = content_desktop.getElementsByTagName('h3')[3];
+/* || Desktop Viewing Options */
 var desktop_portrait = content_desktop.getElementsByClassName('portraits')[0];
 var desktop_landscape = content_desktop.getElementsByClassName('landscapes')[0];
 var desktop_about_me = content_desktop.getElementsByClassName('about-me')[0];
 
-/* || Mobile Sidebar Onclicks */
-var mobile_close_tag = content_mobile.getElementsByTagName('h3')[0];
-var mobile_portrait_tag = content_mobile.getElementsByTagName('h3')[1];
-var mobile_landscape_tag = content_mobile.getElementsByTagName('h3')[2];
-var mobile_about_me_tag = content_mobile.getElementsByTagName('h3')[3];
+/* || Mobile Viewing Options */
 var mobile_portraits = content_mobile.getElementsByClassName('portraits')[0];
 var mobile_landscapes = content_mobile.getElementsByClassName('landscapes')[0];
 var mobile_about_me = content_mobile.getElementsByClassName('about-me')[0];
@@ -109,13 +95,11 @@ function scroll_top() {
     window.scrollTo(0,0);
 }
 
-function close_tag() {
-    desktop_sidebar_window.style.display = "none";
-    mobile_sidebar_window.style.display = "none";
-    console.log(desktop_portrait.style.display);
+function close_tag_function() {
+    sidebar_window.style.display = "none";
 }
 
-function portrait_tag() {
+function portrait_tag_function() {
     scroll_top();
     desktop_portrait.style.display = "block";
     desktop_landscape.style.display = "none";
@@ -123,11 +107,11 @@ function portrait_tag() {
     mobile_portraits.style.display = "block";
     mobile_landscapes.style.display = "none";
     mobile_about_me.style.display = "none";
-    close_tag();
+    close_tag_function();
     resize_body();
 }
 
-function landscape_tag() {
+function landscape_tag_function() {
     scroll_top();
     desktop_portrait.style.display = "none";
     desktop_landscape.style.display = "block";
@@ -135,11 +119,11 @@ function landscape_tag() {
     mobile_portraits.style.display = "none";
     mobile_landscapes.style.display = "block";
     mobile_about_me.style.display = "none";
-    close_tag();
+    close_tag_function();
     resize_body();
 }
 
-function about_me_tag() {
+function about_me_tag_function() {
     scroll_top();
     desktop_portrait.style.display = "none";
     desktop_landscape.style.display = "none";
@@ -147,9 +131,22 @@ function about_me_tag() {
     mobile_portraits.style.display = "none";
     mobile_landscapes.style.display = "none";
     mobile_about_me.style.display = "block";
-    close_tag();
+    close_tag_function();
     resize_body();
 }
+
+/* || Sidebar Events */
+close_tag.addEventListener("click", close_tag_function);
+portrait_tag.addEventListener("click", portrait_tag_function);
+landscape_tag.addEventListener("click", landscape_tag_function);
+about_me_tag.addEventListener("click", about_me_tag_function);
+
+/* || Footer Events */
+back_to_top.addEventListener("click", scroll_top);
+portrait_footer_tag.addEventListener("click", portrait_tag_function);
+landscape_footer_tag.addEventListener("click", landscape_tag_function);
+about_me_footer_tag.addEventListener("click", about_me_tag_function);
+
 
 // //check for Navigation Timing API support
 // if (window.performance) {
@@ -161,19 +158,4 @@ function about_me_tag() {
 //   } else {
 //     console.info( "This page is not reloaded");
 //   }  
- 
-desktop_close_tag.addEventListener("click", close_tag);
-desktop_portrait_tag.addEventListener("click", portrait_tag);
-desktop_landscape_tag.addEventListener("click", landscape_tag);
-desktop_about_me_tag.addEventListener("click", about_me_tag);
-
-mobile_close_tag.addEventListener("click", close_tag);
-mobile_portrait_tag.addEventListener("click", portrait_tag);
-mobile_landscape_tag.addEventListener("click", landscape_tag);
-mobile_about_me_tag.addEventListener("click", about_me_tag);
-
-back_to_top.addEventListener("click", scroll_top);
-portrait_footer_tag.addEventListener("click", portrait_tag);
-landscape_footer_tag.addEventListener("click", landscape_tag);
-about_me_footer_tag.addEventListener("click", about_me_tag);
 
