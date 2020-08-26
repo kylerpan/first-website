@@ -91,7 +91,13 @@ var landscape_footer_tag = footer.getElementsByTagName('p')[6];
 var about_me_footer_tag = footer.getElementsByTagName('p')[7];
 
 /* || Sidebar Tag Functions */
+var location_tracker = "portrait";
+
 function scroll_top() {
+    window.scroll({top: 0, left: 0, behavior: 'smooth' });
+}
+
+function to_top() {
     window.scrollTo(0,0);
 }
 
@@ -100,7 +106,12 @@ function close_tag_function() {
 }
 
 function portrait_tag_function() {
-    scroll_top();
+    if (location_tracker == "portrait"){
+        scroll_top();
+    } else {
+        to_top();
+    }
+    location_tracker = "portrait";
     desktop_portrait.style.display = "block";
     desktop_landscape.style.display = "none";
     desktop_about_me.style.display = "none";
@@ -112,7 +123,12 @@ function portrait_tag_function() {
 }
 
 function landscape_tag_function() {
-    scroll_top();
+    if (location_tracker == "landscape"){
+        scroll_top();
+    } else {
+        to_top();
+    }
+    location_tracker = "landscape";
     desktop_portrait.style.display = "none";
     desktop_landscape.style.display = "block";
     desktop_about_me.style.display = "none";
@@ -124,7 +140,12 @@ function landscape_tag_function() {
 }
 
 function about_me_tag_function() {
-    scroll_top();
+    if (location_tracker == "about-me"){
+        scroll_top();
+    } else {
+        to_top();
+    }
+    location_tracker = "about-me";
     desktop_portrait.style.display = "none";
     desktop_landscape.style.display = "none";
     desktop_about_me.style.display = "block";
@@ -146,16 +167,3 @@ back_to_top.addEventListener("click", scroll_top);
 portrait_footer_tag.addEventListener("click", portrait_tag_function);
 landscape_footer_tag.addEventListener("click", landscape_tag_function);
 about_me_footer_tag.addEventListener("click", about_me_tag_function);
-
-
-// //check for Navigation Timing API support
-// if (window.performance) {
-//     console.info("window.performance works fine on this browser");
-//   }
-//   console.info(performance.navigation.type);
-//   if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
-//     console.info( "This page is reloaded" );
-//   } else {
-//     console.info( "This page is not reloaded");
-//   }  
-
