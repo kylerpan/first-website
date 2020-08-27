@@ -297,12 +297,13 @@ p {
     cursor: default;
 }
 
-.name {
+.email {
     grid-row-start: 2;
     grid-column-start: 1;
 }
 
-.email {
+
+.name {
     grid-row-start: 3;
     grid-column-start: 1;
 }
@@ -327,11 +328,12 @@ p {
 .footer-navigation-content{
     color: #a9a9a9;
     font-family: 'Alegreya Sans SC';
+    margin: 0;
     font-size: 15px;
     text-decoration: underline;
-    margin: 0;
     height: 100%;
     width: auto;
+    justify-self: right;
     text-align: right;
     cursor: pointer;
 }
