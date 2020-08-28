@@ -1,7 +1,7 @@
 /* || CSS code for website*/
 
 body {
-    overflow: hidden;
+    overflow: auto;
     background-color: #AFC2D5;
     top: 0;
     left: 0;
@@ -24,9 +24,17 @@ body {
 }
 
 /* || Content */
+
+#body-wrapper {
+    height: calc(100vh - 100px);
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
 #body-content{
     z-index: 99;
-    margin: 0;
+    margin-top: 100px;
     height: 356px;
     width: 762px;
     display: grid;
@@ -159,10 +167,7 @@ body {
 /* || Footer */
 #footer {
     background-color: black;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    margin: 0;
+    position: static;
     height: 100px;
     width: 100vw;
     display: grid;
@@ -170,10 +175,10 @@ body {
 
 .footer-content {
     margin: 15px 30px 0 30px;
-    height: 130px;
+    height: 85px;
     width: calc(100vw - 60px);
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 26px);
     grid-template-columns: repeat(2, calc(50vw - 30px));
 }
 
@@ -255,10 +260,18 @@ body {
         display: none;
     }
 
+    #body-wrapper {
+        height: calc(100vh - 100px);
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+
     #body-content {
         z-index: 99;
-        margin: 0;
-        height: 409.6;
+        margin-top: 100px;
+        height: 409.6px;
         width: 300px;
         display: grid;
         place-items: center;
