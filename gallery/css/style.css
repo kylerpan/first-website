@@ -1,4 +1,4 @@
-/* || CSS code for photo*/
+/* || CSS code for gallery*/
 
 html {
     margin: 0;
@@ -335,7 +335,6 @@ p {
     width: auto;
     justify-self: right;
     text-align: right;
-    cursor: pointer;
 }
 
 .back-to-top {

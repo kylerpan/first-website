@@ -76,22 +76,34 @@ body {
 }
 
 .links {
+    margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(2, 71.2px);
+    grid-template-columns: repeat(2, 70px);
+    grid-template-rows: 60px 11.2px;
     grid-row-start: 4;
     grid-column-start: 3;
 }
 
-.resume {
+.gallery {
     height: 60px;
     width: 60px;
     grid-column-start: 1;
 }
 
-.photo {
+.resume {
     height: 60px;
     width: 60px;
     grid-column-start: 2;
+}
+
+.links-text {
+    font-family: 'Arya';
+    height: auto;
+    width: auto;
+    margin: 0 10px 0 0 ;
+    font-size: 12px;
+    text-align: center;
+    grid-row-start: 2;
 }
 
 /* || Background */
@@ -166,6 +178,7 @@ body {
 
 /* || Footer */
 #footer {
+    z-index: 99;
     background-color: black;
     position: static;
     height: 100px;
@@ -231,9 +244,11 @@ body {
     grid-row: 2 / span 2;
     grid-column-start: 2;
     justify-self: right;
+    cursor: pointer;
 }
 
 .individual_logo {
+    
     background-color: white;
     border: 1px solid white;
     border-radius: 100%;
@@ -243,11 +258,12 @@ body {
     width: auto;
     justify-self: right;
     align-self: right;
+    cursor: pointer;
 }
 
 
 /* mobile  view */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 730px) {
 
     .content-mobile {
         position: fixed;
@@ -320,23 +336,40 @@ body {
     }
     
     .links {
+        margin-top: 20px;
         display: grid;
         justify-items: center;
         align-items: center;
-        grid-template-rows: 50px;
-        grid-template-columns: repeat(2, 40px);
+        grid-template-rows: 40px 10px;
+        grid-template-columns: repeat(2, 50px);
         grid-row-start: 8;
         grid-column-start: 1;
     }
+
+    .gallery {
+        height: 40px;
+        width: 40px;
+        grid-row-start: 1;
+        grid-column-start: 1;
+
+    }  
     
     .resume {
         height: 40px;
         width: 40px;
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }  
+
+    .links-text {
+        font-family: 'Arya';
+        margin: 0;
+        height: auto;
+        width: auto;
+        font-size: 10px;
+        text-align: center;
+        grid-row-start: 2;
     }
-    .photo {
-        height: 40px;
-        width: 40px;
-    }    
 
     /* clouds */
     #clouds_mobile {
