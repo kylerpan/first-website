@@ -34,8 +34,8 @@ body {
 /* || Loading Screen */
 #loading_window {
     z-index: 99;
-    position: fixed;
     background-color: white;
+    position: fixed;
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -53,8 +53,8 @@ body {
 
 .loading_text {
     font-family: 'Arya';
-    font-size: 40px;
     margin: 0;
+    font-size: 40px;
     height: auto;
     text-align: center;
     align-self: center;
