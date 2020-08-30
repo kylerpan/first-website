@@ -31,6 +31,49 @@ body {
     justify-content: center;
 }
 
+/* || Loading Screen */
+#loading_window {
+    z-index: 99;
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    animation: fade_out 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.loading_content {
+    display: grid;
+    grid-template-rows: repeat(2, 50px);
+    grid-template-columns: 140px;
+}
+
+.loading_text {
+    font-family: 'Arya';
+    font-size: 40px;
+    margin: 0;
+    height: auto;
+    text-align: center;
+    align-self: center;
+    grid-row-start: 1;
+}
+
+.loading_bar {
+    z-index: 1;
+    background-color: black;
+    margin: 0;
+    height: 30px;
+    width: 10px;
+    align-self: center;
+    grid-row-start: 2;
+    animation: loading_progress 2s;
+    animation-fill-mode: forwards;
+}
+
+
 /* || Header */
 #header {
     height: 100px;
@@ -273,7 +316,6 @@ p {
     height: 100%;
     width: 100%;
     grid-row-start: 1;
-    cursor: default;
 }
 
 .get-in-touch {
@@ -294,7 +336,6 @@ p {
     width: auto;
     justify-self: left;
     text-align: left;
-    cursor: default;
 }
 
 .email {
@@ -335,6 +376,7 @@ p {
     width: auto;
     justify-self: right;
     text-align: right;
+    cursor: pointer;
 }
 
 .back-to-top {
@@ -448,6 +490,18 @@ p {
     }
 }
 
+@keyframes fade_out {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+        z-index: -1;
+    }
+}
+
 @keyframes sidebar_slide {
     from {
         transform: translateX(100%);
@@ -455,6 +509,17 @@ p {
 
     to {
         transform: translateX(0);
+    }
+
+}
+
+@keyframes loading_progress {
+    from {
+        width: 10px;
+    }
+
+    to {
+        width: 140px;
     }
 
 }

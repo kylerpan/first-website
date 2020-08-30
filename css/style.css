@@ -63,7 +63,6 @@ body {
     font-weight: bold;
     grid-row-start: 2;
     grid-column-start: 3;
-    cursor: default;
 }
 
 .text {
@@ -72,7 +71,6 @@ body {
     font-size: 20px;
     grid-row-start: 3;
     grid-column-start: 3;
-    cursor: default;
 }
 
 .links {
@@ -203,7 +201,6 @@ body {
     height: 100%;
     width: auto;
     grid-row-start: 1;
-    cursor: default;
 }
 
 .get-in-touch {
@@ -225,7 +222,6 @@ body {
     width: auto;
     justify-self: left;
     text-align: left;
-    cursor: default;
 }
 
 .email {
@@ -244,7 +240,6 @@ body {
     grid-row: 2 / span 2;
     grid-column-start: 2;
     justify-self: right;
-    cursor: pointer;
 }
 
 .individual_logo {
@@ -258,7 +253,6 @@ body {
     width: auto;
     justify-self: right;
     align-self: right;
-    cursor: pointer;
 }
 
 

@@ -60,10 +60,10 @@ window.addEventListener("resize", resize_body);
 var hamburger_icon = document.getElementById('hamburger-icon');
 var sidebar_window = document.getElementsByClassName('sidebar-window')[0];
 var desktop_sidebar_open_space = document.getElementsByClassName('sidebar-open-space')[0];
-var close_tag = body.getElementsByTagName('h3')[0];
-var portrait_tag = body.getElementsByTagName('h3')[1];
-var landscape_tag = body.getElementsByTagName('h3')[2];
-var about_me_tag = body.getElementsByTagName('h3')[3];
+var close_tag = body.getElementsByTagName('h3')[1];
+var portrait_tag = body.getElementsByTagName('h3')[2];
+var landscape_tag = body.getElementsByTagName('h3')[3];
+var about_me_tag = body.getElementsByTagName('h3')[4];
 
 hamburger_icon.onclick = function() {
     sidebar_window.style.display = "block";
