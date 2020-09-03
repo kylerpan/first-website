@@ -299,10 +299,10 @@ p {
 
 .footer-content {
     margin: 20px 26px 0 30px;
-    height: 130px;
+    height: 146px;
     width: calc(100vw - 76px);
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(2, calc(50vw - 38px));
 }
 
@@ -344,6 +344,11 @@ p {
 
 .name {
     grid-row-start: 3;
+    grid-column-start: 1;
+}
+
+.inspired {
+    grid-row-start: 6;
     grid-column-start: 1;
 }
 

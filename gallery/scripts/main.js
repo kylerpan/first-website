@@ -66,7 +66,6 @@ function displaynone() {
     loading_screen.style.display = "none";
 }
 
-window.setTimeout(resize_body, 10000);
 window.setTimeout(fadeout, 10000);
 window.setTimeout(displaynone, 11000);
 window.addEventListener('load', function(){
@@ -105,10 +104,10 @@ var mobile_about_me = content_mobile.getElementsByClassName('about-me')[0];
 
 /* || Footer Onclicks */
 var footer = document.getElementById("footer");
-var back_to_top = footer.getElementsByTagName('p')[4];
-var portrait_footer_tag = footer.getElementsByTagName('p')[5];
-var landscape_footer_tag = footer.getElementsByTagName('p')[6];
-var about_me_footer_tag = footer.getElementsByTagName('p')[7];
+var back_to_top = footer.getElementsByTagName('p')[5];
+var portrait_footer_tag = footer.getElementsByTagName('p')[6];
+var landscape_footer_tag = footer.getElementsByTagName('p')[7];
+var about_me_footer_tag = footer.getElementsByTagName('p')[8];
 
 /* || Sidebar Tag Functions */
 var location_tracker = "portrait";
