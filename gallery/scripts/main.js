@@ -52,8 +52,28 @@ function resize_body(){
     body.style.height = body_height;
 }
 
-resize_body();
 window.addEventListener("resize", resize_body);
+
+/* || Check if fully loaded */
+var loading_screen = document.getElementById('loading-window');
+var loading_bar = document.getElementsByClassName('loading-bar')[0];
+
+function fadeout(){
+    loading_screen.style.opacity = "0";
+}
+
+function displaynone() {
+    loading_screen.style.display = "none";
+}
+
+window.setTimeout(resize_body, 10000);
+window.setTimeout(fadeout, 10000);
+window.setTimeout(displaynone, 11000);
+window.addEventListener('load', function(){
+    resize_body();
+    window.setTimeout(fadeout);
+    window.setTimeout(displaynone, 1000);
+})
 
 
 /* || Sidebar */
