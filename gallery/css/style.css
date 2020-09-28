@@ -83,11 +83,12 @@ body {
 
 h1 {
     font-family: 'Arya';
-    margin-left: 25px; 
+    margin: 10px 0 10px 25px; 
     font-size: 45px;
     justify-self: start;
     align-self: center;
     grid-column-start: 1;
+    cursor: pointer;
 }
 
 #hamburger-icon {

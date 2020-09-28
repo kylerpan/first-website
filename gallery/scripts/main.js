@@ -42,6 +42,11 @@ mobile_preview.onclick = function() {
     mobile_preview.style.display = "none";
 }
 
+/* || Back to Main Website */
+var nametag = document.getElementsByTagName('h1')[0];
+nametag.onclick = function() {
+    window.open("https://kylerpan.github.io/");
+}
 
 /* || Height of Website */
 var body = document.getElementsByTagName('body')[0];
