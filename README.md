@@ -1,3 +1,5 @@
-# kylerpan.github.io
+# Personal Website
 
-My personal website!
+This is my website that I bulid from scratch! 
+It includes my socials, resume, and a gallery of pics of myself and landscapes. 
+Enjoy!
