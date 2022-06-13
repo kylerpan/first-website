@@ -45,7 +45,7 @@ mobile_preview.onclick = function() {
 /* || Back to Main Website */
 var nametag = document.getElementsByTagName('h1')[0];
 nametag.onclick = function() {
-    window.open("https://kylerpan.github.io/", "_self");
+    window.open("../", "_self");
 }
 
 /* || Height of Website */
